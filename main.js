@@ -1,6 +1,7 @@
 var colors = ["#DB6413", "red", "#3A3838", "#548135", "#833C0B", "#002060", "#92D050", "#5b9bd5"];
 var countTrue = [0, 0, 0, 0, 0, 0, 0];
 var musicState = ['', '400', '1000', '3000', '7000', '10000', '12000'];
+var audios = [new Audio("./400.wav"), new Audio("./1000.wav"), new Audio("./3000.wav"), new Audio("./7000.wav"), new Audio("./10000.wav"), new Audio("./12000.wav")];
 var state = 0;
 var countInState = 0;
 var audio = -1;
@@ -23,14 +24,12 @@ $(document).ready(function(){
         if(countInState == 10){
           state++;
           countInState = 0;
-          if(audio != -1){
-            audio.pause();
+          if(state != 1){
+            audios[state-1].pause();
           }
-          if(state != 7){
-            audio = new Audio("./"+musicState[state]+".wav");
-            audio.loop = true;
-            audio.play();
-          }
+            audios[state].loop = true;
+            audios[state].play();
+
           $("#t"+(state-1)).attr("value", countTrue[state-1]);
         }
         $(this).attr("disabled", "true");
