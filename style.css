@@ -1,0 +1,43 @@
+/*
+* CSS document
+*/
+
+.hide{
+  display: none;
+}
+
+.panel{
+  position: relative;
+}
+
+.mypink{
+  background-color: #EC407A;
+}
+
+.firstpage{
+  /* display: none; */
+}
+
+.heading{
+  display: block;
+}
+
+.timerpanel{
+  height:100%;
+  display: none;
+}
+
+.tablepanel{
+  display: none;
+}
+
+.tds{
+  width:4.5%;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  display: inline-block;
+  /* display: none; */
+}

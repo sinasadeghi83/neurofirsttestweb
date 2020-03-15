@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Hasheminejad students neuroscience test</title>
+  </head>
+
+  <body class="mypink">
+    <div class="w3-quarter">.</div>
+    <div class="w3-container w3-panel w3-card w3-half w3-white w3-padding-16 w3-right-align panel">
+      <h1 class="heading" id="header">Heading</h1>
+      <p class="descriptions firstpage">descriptions ...</p>
+      <button id="startbtn" class="w3-button w3-pink firstpage">Start</button>
+      <div class="w3-display-container timerpanel"><h1 class="w3-display-middle" id="timertext">6</h1></div>
+      <!-- Grid -->
+      <div class="w3-container tablepanel">
+        <table class="w3-table tablegrid" border=1>
+        </table>
+        <button id="nextbtn" class="w3-button w3-pink hide" disabled=true>بعدی</button>
+        <div class="w3-container hide" id="formpanel">
+          <form method="POST" action="http://1a8218aa.ngrok.io/neuroscience/save.php">
+            <input name="t0" type="text" class="w3-hide" id="t0" />
+            <input name="t400" type="text" class="w3-hide" id="t1" />
+            <input name="t1000" type="text" class="w3-hide" id="t2" />
+            <input name="t3000" type="text" class="w3-hide" id="t3" />
+            <input name="t7000" type="text" class="w3-hide" id="t4" />
+            <input name="t10000" type="text" class="w3-hide" id="t5" />
+            <input name="t12000" type="text" class="w3-hide" id="t6" />
+            <input name="submit" type="submit" class="w3-button w3-pink" id="submit" value="ارسال"/>
+          </form>
+        </div>
+      </div>
+
+      <div style="color:white;">.</div>
+    </div>
+    <div class="w3-quarter">.</div>
+    <script src="main.js"></script>
+  </body>
+</html>
