@@ -39,7 +39,7 @@ $(document).ready(function(){
         }
         $('#header').text("لطفا با دقت نگاه کنید");
         $('#header').css("color", "black");
-        $('body').css("background", 'white');
+        $('body').css("background", '#FFF');
         test();
       }
     });
@@ -77,10 +77,10 @@ function newRound(){
   var radius = Number(cellWidth.replace('px', ''));
   $(".circle").css('display', 'inline-block');
   for(i = 0; i < 8; i++){
-    var x = Math.floor(Math.random()*21) + 16 + radius;
+    var x = Math.floor(Math.random()*80);
     var y = Math.floor(Math.random()*12) + 16 + 2 * radius;
     while(isInCircle(x, y, randomCircles, radius)){
-      x = Math.floor(Math.random()*21) * radius + 16 + radius;
+      x = Math.floor(Math.random()*80);
       y = Math.floor(Math.random()*12) * radius + 16 + 2 * radius;
     }
     var temp = [x, y];
@@ -105,7 +105,6 @@ function getAnswer(randomCircles, radius){
     if(i==0){
       trueColor = $("#c"+mId).css('background-color');
       trueId = mId;
-      console.log(trueColor + " " + mId + " " );
     }
     $("#c"+mId).css("background", "none");
     $("#c"+mId).css("border", "1px solid #000");
@@ -187,7 +186,7 @@ function isInCircle(x, y, circles, radius){
 }
 
 function createCircle(color, cellWidth, x, y, mid){
-  var circlev = '<span style="opacity:1; background-color:'+color+'; width:'+2*cellWidth+'px; height:'+2*cellWidth+'px; bottom:'+y+'px; right:'+x+'px;" class="circle" id="'+mid+'"></span>';
+  var circlev = '<span style="opacity:1; background-color:'+color+'; width:'+2*cellWidth+'px; height:'+2*cellWidth+'px; bottom:'+y+'px; right:'+x+'%;" class="circle" id="'+mid+'"></span>';
   return circlev;
 }
 
